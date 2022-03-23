@@ -10,14 +10,14 @@ public class Projectile_Small : MonoBehaviour
 
     public Transform playerTransform;
     private Vector3 playerDelayedTransform;
-    
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
         playerTransform = GameObject.FindGameObjectWithTag("ProjectileTarget").transform;
-        playerDelayedTransform = new Vector3(playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
+        playerDelayedTransform = new Vector3(playerTransform.position.x, 
+            playerTransform.position.y, playerTransform.position.z);
     }
     
     void Update()
